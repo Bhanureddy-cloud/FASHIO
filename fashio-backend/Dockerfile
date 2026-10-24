@@ -1,0 +1,13 @@
+# ---- build stage ----
+FROM eclipse-temurin:25-jdk AS build
+WORKDIR /app
+COPY . .
+RUN sed -i 's/\r$//' mvnw && chmod +x mvnw && ./mvnw -q -DskipTests package
+
+# ---- run stage ----
+FROM eclipse-temurin:25-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+ENV JAVA_TOOL_OPTIONS="-Xmx300m -XX:+UseSerialGC"
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
