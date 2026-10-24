@@ -1,0 +1,12 @@
+# secrets
+secrets.properties
+.env
+.env.local
+
+# editor and build output
+.vscode/
+.idea/
+target/
+node_modules/
+dist/
+*.class
