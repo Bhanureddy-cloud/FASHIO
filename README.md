@@ -63,11 +63,9 @@ npm run dev
 ```
 Open http://localhost:5173.
 
-### Demo accounts
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@fashio.com | admin123 |
-| Customer | register your own account | |
+### Accounts
+**Customer:** register your own account on the live site or locally.
+**Admin:** an admin account (`admin@fashio.com`) is created automatically on first start. Its password comes from the `ADMIN_PASSWORD` environment variable. For local development only, it defaults to a development password defined in `application.properties`. The admin panel is shown in the screenshots; contact me if you'd like a walkthrough.
 
 ## Configuration (environment variables)
 
@@ -77,7 +75,7 @@ Open http://localhost:5173.
 | `DB_USERNAME` / `DB_PASSWORD` | Database login | `root` / empty |
 | `JWT_SECRET` | Token signing key (32+ characters) | dev value |
 | `CORS_ORIGINS` | Allowed frontend URLs | `http://localhost:5173` |
-| `ADMIN_PASSWORD` | Password for the seeded admin | `admin123` |
+| `ADMIN_PASSWORD` | Password for the seeded admin | dev-only default (set your own in production) |
 | `VITE_API_URL` | Backend URL used by the frontend | `http://localhost:8080/api` |
 
 ## API overview
