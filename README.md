@@ -49,11 +49,12 @@ CREATE DATABASE fashio_db;
 ```
 
 ### 2. Backend
-Create `fashio-backend/src/main/resources/secrets.properties`:
+Create `fashio-backend/fashio-backend/src/main/resources/secrets.properties`:
 ```properties
 spring.datasource.password=YOUR_MYSQL_PASSWORD
+jwt.secret=ANY_LONG_RANDOM_STRING_OF_32_OR_MORE_CHARACTERS
+app.admin.password=CHOOSE_AN_ADMIN_PASSWORD
 ```
-Run `FashioBackendApplication` (or `./mvnw spring-boot:run`). The API starts on http://localhost:8080. Tables, sample products and an admin account are created automatically on first start.
 
 ### 3. Frontend
 ```bash
