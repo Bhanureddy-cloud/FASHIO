@@ -1,3 +1,6 @@
+**Live demo:** https://fashio-two.vercel.app
+*(The backend runs on a free plan, so the first load after a quiet period can take about a minute.)*
+
 # FASHIO: Style Behind Fashion
 
 A full-stack fashion e-commerce web application built with **React**, **Spring Boot** and **MySQL**.
@@ -94,7 +97,11 @@ Open http://localhost:5173.
 
 ## Screenshots
 
-Add screenshots of the home page, shop page, cart and admin panel here.
+![Home](docs/screenshots/Home.png)
+![Shop](docs/screenshots/Shop.png)
+![Cart](docs/screenshots/Cart.png)
+![Admin Panel](docs/screenshots/AdminPanel.png)
+![Orders](docs/screenshots/Orders.png)
 
 ## Future improvements
 - Online payments (Razorpay)
